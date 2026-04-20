@@ -1,20 +1,29 @@
-name: My First Workflow
+name: Multi-Job demo
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  say-hello:
+  check-files:
     runs-on: ubuntu-latest
 
     steps: 
       - name: Checkout my code
         uses: actions/Checkout@v4
 
-      - name: Say Hello World
-        run: echo "Hello Github Action!"
+      - name: list all files
+        run: ls -la
 
-      - name: Show Date and Time
-        run: date
+      - name: check index.html exists
+        run: echo "Files look good!"
       
+  notify-done:
+
+    runs-on: ubuntu-latest
+
+    needs: check-files
+
+    steps:
+      - name: Success message
+        run: echo "check-files passed!"
