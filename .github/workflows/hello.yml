@@ -28,7 +28,6 @@ jobs:
       - name: Success message
         run: echo "check-files passed!"
 
-    steps:
       - name: Print Secret message
         run: echo "This message is $SITE_MESSAGE"
         env:
