@@ -7,18 +7,29 @@
     <style>
         body {
             background-color: #1a1a2e;
-            color: #f4726b;
+            color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 80px 20px;
         }
         h1 {
-            font-size: 3em;
+            color:#e91e8c;
+            font-size: 2.5em;
+        }
+        .badge {
+            display: inline-block;
+            background: #e91e8c;
+            padding: 8px 20px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            border-radius: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Hello CICD</h1>
-    <p>This site is automatically deployed by github action</p>
+    <h1>Hello from Github Actions!</h1>
+    <p>This site is automatically deployed by github action(using CI/CD)</p>
+    <p>No FTP. No Manual Upload. Just a git push</p>
+    <div class="badge">Deployed Via Github Actions.</div>
 </body>
 </html>
